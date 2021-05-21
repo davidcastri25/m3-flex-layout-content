@@ -23,7 +23,7 @@ a{
     background: url('../images/fons-capçalera.jpg');
     background-position: center; /* Que esté centrado */
     background-attachment: contain; /* Contenida dentro */
-    background-size: cover;
+    background-size: auto;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -69,25 +69,52 @@ a{
                 color: #be4646;
             }
     .texto-principal{
-        background: #F07B3F;
+        background: rgba(0, 0, 0, 0.075); /* Poner transparencia*/        
     }
-        h1{
-            background: #FFD460;
-        }
+        h1{            
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            opacity: 0.5; /*Semitransparente*/
+            color: #c22f2f;
+            font-weight: 900;/*Ancho*/
+            text-align: center;            
+            line-height: 1.6;
+        }         
 
 .section{
-    background: #000;
+    background: black; /*???????????????????*/
     display: flex;
 }
     .articulos{
-        background: #4E4E6A;
+        background: #ececec;
         flex: 2 1 auto;
         display: flex;
         flex-flow: row wrap;
     }
-        .article{
-            background: #1F6CB0;
-            flex: 1 1 40%;
+        .article{            
+            color: #444;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 10px 10px 0 0;
+            flex: 1 1 45%;
+            background: #f7f7f7;
+        }
+        .article img{
+            width: 100%;
+        }        
+        h3{
+           color: rgb(241, 240, 240);
+           font-size: 13px;
+           padding: 10px 0;
+           margin-top: -80px; 
+        }
+        h2{
+           font-size: 25px;
+           text-transform: uppercase;
+           padding: 0px 0 10px 0;
+           width: 100%;
+           color: #fff;
+           background: #F73f52;
         }
         .navegacion{
             background: #70a3c4;
