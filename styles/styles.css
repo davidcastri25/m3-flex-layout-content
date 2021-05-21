@@ -1,0 +1,136 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box; /*Para que las cajas no se desborden unas con otras.*/
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Dancing Script', cursive;
+    font-family: 'Lora', serif;*/
+}
+
+a{
+    text-decoration: none; /*Sacamos estilos de las anclas de navegación*/
+}
+
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header{
+    background: url('../images/fons-capçalera.jpg');
+    background-position: center; /* Que esté centrado */
+    background-attachment: contain; /* Contenida dentro */
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .menu{
+        /* background: rgba(0, 0, 0, .1); Poner transparencia*/
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        /*border-bottom: 1px solid rgb(26, 10, 10);Si quisiéramos un borde de línea inferior*/
+    }
+        .logo{
+            flex: 1 1 auto;            
+        }
+            .logo a{
+                color: #fff;                
+            }            
+            .logo a img{
+                width: 150px;
+            }
+        .nav{
+            flex: 5 1 auto;                                   
+        }
+            .nav a{
+                color: #3a3a50;
+                padding: 0 10px;
+                letter-spacing: 2px; /*Separación de dos pixels entre letras*/                   
+            }
+            .nav a:hover{
+                /*Efecto rollover*/
+                color: #be4646;
+            }
+        .social{            
+            flex: 1 1 auto;
+            /*display: flex; Si logos social a lo largo de eje principal*/
+        }
+            .social a{
+                font-size: 18px;
+                color: #3a3a50;
+                padding: 0 5px;
+            }
+            .social a:hover{
+                /*Efecto rollover*/
+                color: #be4646;
+            }
+    .texto-principal{
+        background: #F07B3F;
+    }
+        h1{
+            background: #FFD460;
+        }
+
+.section{
+    background: #000;
+    display: flex;
+}
+    .articulos{
+        background: #4E4E6A;
+        flex: 2 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+        .article{
+            background: #1F6CB0;
+            flex: 1 1 40%;
+        }
+        .navegacion{
+            background: #70a3c4;
+            flex: 1 1 100%;
+        }
+    .aside{
+        background: #F73f52;
+        flex: 1 1 auto;
+    }
+        .publicidad{
+            background: #ffea85;
+        }
+
+.footer{
+    background: #000;
+}
+    .pie{
+       background: #e6af2e; 
+    }
+
+@media all and (max-width: 800px){ 
+    /*De 0 a 800 se aplicarán los siguientes estilos.*/
+    .section{
+        flex-direction: column;
+        background: yellow;
+    }
+}
+
+@media all and (max-width: 600px){
+    /*De 0 a 600 se aplicarán los siguientes estilos.*/
+    .menu{
+        flex-flow: row wrap;                
+    }
+        .logo{              
+            flex: 1 1 100%;            
+        }
+        .nav{                
+            flex: 1 1 100%;
+         }
+        .social{                
+            flex: 1 1 100%;
+        }
+    .articulos{
+        flex-direction: column;
+    }    
+}
