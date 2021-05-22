@@ -54,7 +54,7 @@ a{
             .nav a:hover{
                 /*Efecto rollover*/
                 color: #be4646;
-            }
+            }        
         .social{            
             flex: 1 1 auto;
             /*display: flex; Si logos social a lo largo de eje principal*/
@@ -69,7 +69,10 @@ a{
                 color: #be4646;
             }
     .texto-principal{
-        background: rgba(0, 0, 0, 0.075); /* Poner transparencia*/        
+        background: rgba(0, 0, 0, 0.075); /* Poner transparencia*/
+        display: flex; 
+        justify-content: center;
+        align-items: center;       
     }
         h1{            
             font-family: 'Dancing Script', cursive;
@@ -82,14 +85,16 @@ a{
         }         
 
 .section{
-    background: black; /*???????????????????*/
+    /*background: black;*/
+    margin: 0px;
+    padding: 0px;
     display: flex;
 }
     .articulos{
         background: #ececec;
         flex: 2 1 auto;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row wrap;        
     }
         .article{            
             color: #444;
@@ -98,28 +103,41 @@ a{
             margin: 10px 10px 0 0;
             flex: 1 1 45%;
             background: #f7f7f7;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
         }
         .article img{
             width: 100%;
+            padding: 0px;            
         }        
         h3{
            color: rgb(241, 240, 240);
            font-size: 13px;
            padding: 10px 0;
-           margin-top: -80px; 
+           margin-top: -80px;    
         }
         h2{
            font-size: 25px;
-           text-transform: uppercase;
-           padding: 0px 0 10px 0;
+           text-transform: uppercase;           
+           padding: 10px 0 10px 0px;
            width: 100%;
            color: #fff;
            background: #F73f52;
         }
+        .article a{
+            color: #3a3a50;                
+        }
+            .article a:hover{
+                /*Efecto rollover*/
+                color: #be4646;               
+            }
         .navegacion{
             background: #70a3c4;
+            margin-left: 0px;
             flex: 1 1 100%;
         }
+            
     .aside{
         background: #F73f52;
         flex: 1 1 auto;
@@ -137,10 +155,37 @@ a{
 
 @media all and (max-width: 800px){ 
     /*De 0 a 800 se aplicarán los siguientes estilos.*/
+    .menu{
+        height: auto;            
+    }
+    .logo a img{
+        width: 100px;
+    }
+    /*nav {
+        display: flex
+    }*/    
+    .nav a{
+        font-size: 16px;
+    }
+    .social a{
+        font-size: 16px;
+    }
+    .texto-principal{
+        height: 60px;
+    }
+    h1 {
+        font-size: 30px;
+    } 
     .section{
         flex-direction: column;
-        background: yellow;
+        /*background: yellow;*/
+        margin: 0px;
+        padding: 0px;
     }
+    h2{
+        font-size: 22px;
+    }
+       
 }
 
 @media all and (max-width: 600px){
