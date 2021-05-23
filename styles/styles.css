@@ -32,6 +32,7 @@ a{
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+        margin-bottom: -50px;
         /*border-bottom: 1px solid rgb(26, 10, 10);Si quisiéramos un borde de línea inferior*/
     }
         .logo{
@@ -42,13 +43,16 @@ a{
             }            
             .logo a img{
                 width: 150px;
+                margin-left: -60px;
             }
         .nav{
-            flex: 5 1 auto;                                   
+            flex: 5 1 auto;            
+            margin-left: -50px;                                   
         }
             .nav a{
                 color: #3a3a50;
                 padding: 0 10px;
+                margin: -8px;
                 letter-spacing: 2px; /*Separación de dos pixels entre letras*/                   
             }
             .nav a:hover{
@@ -114,29 +118,36 @@ a{
         h3{
            color: rgb(241, 240, 240);
            font-size: 13px;
-           padding: 10px 0;
-           margin-top: -80px;    
+           padding: 10px 0px 0px 10px;           
+           margin-top: -80px;
+           margin-bottom: -10px;    
         }
         h2{
-           font-size: 25px;
+           font-size: 25px;           
            text-transform: uppercase;           
-           padding: 10px 0 10px 0px;
+           padding: 10px 0px 10px 10px;
            width: 100%;
            color: #fff;
            background: #F73f52;
         }
         .article a{
-            color: #3a3a50;                
+            color: #3a3a50;
+            margin-top: -20px;                
         }
             .article a:hover{
                 /*Efecto rollover*/
                 color: #be4646;               
             }
-        .navegacion{
+        .navegacion{ /* Inacabado: no lo pide el ejercicio */
             background: #70a3c4;
+            color: #3a3a50;
             margin-left: 0px;
             flex: 1 1 100%;
         }
+            .navegacion a:hover{
+                /*Efecto rollover*/
+                color: #be4646;               
+            }
             
     .aside{
         background: #F73f52;
@@ -154,21 +165,24 @@ a{
     }
 
 @media all and (max-width: 800px){ 
-    /*De 0 a 800 se aplicarán los siguientes estilos.*/
+    /*De 601 a 800 se aplicarán los siguientes estilos.*/
     .menu{
         height: auto;            
     }
     .logo a img{
-        width: 100px;
+        width: 100px;               
     }
-    /*nav {
-        display: flex
-    }*/    
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;                            
+    }    
     .nav a{
-        font-size: 16px;
+        font-size: 10px;
+        margin-left: 5px;        
     }
     .social a{
-        font-size: 16px;
+        font-size: 12px;
     }
     .texto-principal{
         height: 60px;
@@ -181,9 +195,13 @@ a{
         /*background: yellow;*/
         margin: 0px;
         padding: 0px;
-    }
+    }        
     h2{
         font-size: 22px;
+    }
+    .navegacion{
+        display: flex;
+        flex-flow: row wrap;
     }
        
 }
@@ -194,15 +212,51 @@ a{
         flex-flow: row wrap;                
     }
         .logo{              
-            flex: 1 1 100%;            
+            flex: 1 1 100%;
+            display: flex;
+            justify-content: center;
+            margin: -40px 0px;            
         }
+            .logo a img{                
+                margin-left: auto;
+                margin-right: auto;
+            }            
         .nav{                
             flex: 1 1 100%;
-         }
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;           
+        }
+            .nav a{
+                font-size: 10px;
+            }
         .social{                
             flex: 1 1 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
         }
+            .social a{
+                font-size: 10px;                
+            }
+        .texto-principal{
+            height: 85px;
+        }
+            h1{
+                font-size: 20px;
+            }
     .articulos{
-        flex-direction: column;
-    }    
+        flex-direction: column nowrap;
+    }
+    .article{            
+            margin: 10px 10px 0px 0px;
+            flex: 1 1 100%;            
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+    }
+    .article img{
+            width: 100%;
+            padding: 0px;            
+    } 
 }
